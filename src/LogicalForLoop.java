@@ -1,10 +1,11 @@
 public class LogicalForLoop {
     public static void main(String[] args) {
         int i = 10;
+        int c = 1;
         for (i=28; i<40; i++)
         {
-            int c = 16;
+            c = i;
         }
-        System.out.println(i);
+        System.out.println(c + i);
     }
 }
