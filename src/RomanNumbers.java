@@ -34,7 +34,7 @@ public class RomanNumbers {
         }
         System.out.println(hm.get(58));*/
 
-        String s = "LXXXIX";
+        String s = "LXXXIX";// demo num "UUTSSROQDCCCXXIII" = 2759823; //MAX num 39,99,999
         //          012345
         HashMap<Character , Integer> map = new HashMap<>();
         map.put('I',1);
@@ -44,6 +44,14 @@ public class RomanNumbers {
         map.put('C',100);
         map.put('D',500);
         map.put('M',1000);
+        //CUSTOM
+        map.put('O',1000);// _I
+        map.put('P',5000); // _V
+        map.put('Q',10000);// _X
+        map.put('R',50000);// _L
+        map.put('S',100000);// _C
+        map.put('T',500000);// _D
+        map.put('U',1000000);// _M
         int sum = 0; //50 60 70 80 79 89
         //0 to 5
         for(int i = 0 ; i < s.length() ; i++){ //0 1 2 3 4 5
