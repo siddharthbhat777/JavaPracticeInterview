@@ -1,3 +1,5 @@
+package OwnPractice;
+
 import java.util.*;
 
 class fact

@@ -1,3 +1,5 @@
+package OwnPractice;
+
 import java.lang.*;
 
 class armst
