@@ -10,8 +10,13 @@ abstract class Class1 {
 
 class Class2 extends Class1 {
     @Override
-    void met2() {
+    void met2() {//compulsory to override
         System.out.println("Hola");
+    }
+
+    @Override
+    int met1() {
+        return 2;
     }
 }
 
@@ -28,6 +33,7 @@ public class AbstractClassPractice {
 
         Class2 c2 = new Class2();
         c2.met2();
+        System.out.println(c2.met1());
     }
 
 }

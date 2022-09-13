@@ -14,5 +14,6 @@ public class FinalStaticKeyword {
         FinalStaticKeyword f = new FinalStaticKeyword();
         System.out.println(a);
         System.out.println(f.met1());
+        System.out.println(a);
     }
 }

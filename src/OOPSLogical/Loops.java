@@ -8,7 +8,7 @@ public class Loops {
         do {
             System.out.println("hello" + i);
             if (i==5){
-                i=9;
+                i=8;
                 continue;
             }
             i++;
@@ -19,12 +19,10 @@ public class Loops {
         for (int a=1; a<=10; a++) {
             arr.add("List " + a);
         }
-        for (int a :
-                n) {
+        for (int a : n) {
             System.out.println("loop"+ a);
         }
-        for (String li:
-             arr) {
+        for (String li: arr) {
             System.out.println(li);
         }
 

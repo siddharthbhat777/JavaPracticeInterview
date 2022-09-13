@@ -6,7 +6,6 @@ class Vehicle // OOPSLogical.Base
     {
         System.out.println("Param OOPSLogical.Vehicle");
     }
-
 }
 
 class FourWheeler extends Vehicle
