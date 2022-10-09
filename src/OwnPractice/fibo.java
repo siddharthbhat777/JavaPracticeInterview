@@ -6,7 +6,7 @@ class fibo
 {
 	public static void main (String [] args)
 	{
-		int i = 1;
+		int i=1;
 		int j=0;
 		System.out.println("Enter range:");
 		Scanner sc = new Scanner(System.in);
