@@ -1,7 +1,7 @@
 package OOPSLogical;
 
 public class FinalStaticKeyword {
-    static int a = 12;
+    /*final*/ static int a = 12;
 
     public int met1()
     {
