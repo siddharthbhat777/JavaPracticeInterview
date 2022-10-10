@@ -12,7 +12,7 @@ public class CountDuplicate {
 
         // Creating a HashMap containing char
         // as a key and occurrences as a value
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        Map<Character, Integer> map = new HashMap<>();
 
         // Converting given string into
         // a char array
@@ -43,9 +43,7 @@ public class CountDuplicate {
         // is greater than 1 then print
         // the character and its frequency
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey()
-                    + " : "
-                    + entry.getValue());
+            System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
 }

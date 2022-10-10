@@ -9,21 +9,15 @@ class palin
 		System.out.println("\nEnter a value: ");
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
-		String inp = input;
-		ArrayList arr = new ArrayList<>();
-		for (int i = 0; i< inp.length(); i++)
+		ArrayList<Object> ans = new ArrayList<>();
+		for (int i = input.length()-1; i>=0; i--)
 		{
-			arr.add(inp.charAt(i));
-		}
-		ArrayList ans = new ArrayList<>();
-		for (int j = inp.length()-1; j>=0; j--)
-		{
-			ans.add(arr.get(j));
+			ans.add(input.charAt(i));
 		}
 		String res = "";
-		for (int k=0; k<inp.length(); k++)
+		for (int j=0; j<input.length(); j++)
 		{
-			res = res.concat(ans.get(k).toString());
+			res = res.concat(ans.get(j).toString());
 		}
 		if (input.equals(res))
 		{
