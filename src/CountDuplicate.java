@@ -14,12 +14,23 @@ public class CountDuplicate {
         // as a key and occurrences as a value
         Map<Character, Integer> map = new HashMap<>();
 
+        for (int i = 0; i < str.length(); i++) {
+            if (map.containsKey(str.charAt(i))) {
+                map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+            } else {
+                map.put(str.charAt(i), 1);
+            }
+        }
+
+        // Alternative way
+
         // Converting given string into
         // a char array
-        char[] charArray = str.toCharArray();
+        /*char[] charArray = str.toCharArray();
 
         // Checking each character
         // of charArray
+
         for (char c : charArray) {
 
             if (map.containsKey(c)) {
@@ -36,7 +47,7 @@ public class CountDuplicate {
                 // 1 as it's value.
                 map.put(c, 1);
             }
-        }
+        }*/
 
         // Traverse the HashMap, check
         // if the count of the character
