@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class PracticeImp {
+    public static void main(String[] args) {
+        /* Do not remove this */
+        String s = "abcba";
+        int num = 153;
+        System.out.println(palindrome(s)? "The string \"" + s + "\" is Palindrome" : "The string \"" + s + "\" is not Palindrome");
+        System.out.println(noDuplicate(s));
+        System.out.println(fibonacci(num));
+        System.out.println(primeNumbers(num));
+        System.out.println(armstrongNum(num)? "The number " + num + " is armstrong." : "The number " + num + " is not armstrong.");
+    }
+
+    private static boolean armstrongNum(int num) {
+        int tmp = num;
+        int power = String.valueOf(num).length();
+        double ans = 0;
+        for (int i=0; i<power; i++) {
+            ans = ans + Math.pow(tmp % 10, power);
+            tmp = tmp / 10;
+        }
+        return num == (int) ans;
+    }
+
+    private static ArrayList<Integer> primeNumbers(int num) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int i=2; i<num; i++) {
+            for (int j=2; j<i; j++) {
+                if (i % j != 0) {
+                    ans.add(i);
+                }
+                break;
+            }
+        }
+        return ans;
+    }
+
+    private static ArrayList<Integer> fibonacci(int num) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        int a = 0;
+        int b = 1;
+        for (int i=0; i<num; i++) {
+            ans.add(b);
+            int k = a+b;
+            a = b;
+            b = k;
+        }
+        return ans;
+    }
+
+    private static String noDuplicate(String s) {
+        HashMap<Character, Integer> hm = new HashMap<>();
+        for (int i=0; i<s.length(); i++) {
+            if (hm.containsKey(s.charAt(i))) {
+                hm.put(s.charAt(i), hm.get(s.charAt(i))+1);
+            } else {
+                hm.put(s.charAt(i), 1);
+            }
+        }
+        StringBuilder ans = new StringBuilder();
+        for (Map.Entry<Character, Integer> map : hm.entrySet()) {
+            ans.append(map.getKey());
+        }
+        return ans.toString();
+    }
+
+    private static boolean palindrome(String s) {
+        StringBuilder ans = new StringBuilder();
+        for (int i=s.length()-1; i>=0; i--) {
+            ans.append(s.charAt(i));
+        }
+        return ans.toString().equals(s);
+    }
+}
