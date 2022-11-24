@@ -6,7 +6,9 @@ interface NewIntf {
     int diff(int i, int j);
 }
 
-interface NewIntf2 {
+interface Demo {}
+
+interface NewIntf2 extends NewIntf, Demo {
     int b = 20;
     String str(String j);
     void ety();
@@ -20,6 +22,16 @@ class ImpClass implements NewIntf2 {
     @Override
     public void ety() {
         System.out.println("Ello");
+    }
+
+    @Override
+    public int sum(int i, int j) {
+        return 0;
+    }
+
+    @Override
+    public int diff(int i, int j) {
+        return 0;
     }
 }
 
