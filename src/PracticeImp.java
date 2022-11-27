@@ -9,6 +9,7 @@ public class PracticeImp {
         String s = "abcba";
         int num = 153;
         String vowelString = "Hello this is sid here.";
+        int factorialNum = 5;
         System.out.println(palindrome(s)? "The string \"" + s + "\" is Palindrome" : "The string \"" + s + "\" is not Palindrome");
         System.out.println(noDuplicate(s));
         System.out.println(fibonacci(num));
@@ -20,6 +21,18 @@ public class PracticeImp {
         swapWithoutTemp(pi);
         System.out.println("Numbers after swap: " + pi.swapNum1 + " " + pi.swapNum2);
         System.out.println(noVowelsString(vowelString));
+        System.out.println(factorialOfNumber(factorialNum));
+    }
+
+    private static int factorialOfNumber(int factorialNum) {
+        int ans = 1;
+        if (factorialNum == ans) {
+            return ans;
+        }
+        for (int i = 2; i <= factorialNum; i++) {
+            ans = ans * i;
+        }
+        return ans;
     }
 
     private static String noVowelsString(String vowelString) {
