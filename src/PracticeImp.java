@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,8 @@ public class PracticeImp {
         int num = 153;
         String vowelString = "Hello this is sid here.";
         int factorialNum = 5;
+        int [] arr = {9, 2, 4, 1, 7, 23, 76, 5};
+        int largestNum = 4;
         System.out.println(palindrome(s)? "The string \"" + s + "\" is Palindrome" : "The string \"" + s + "\" is not Palindrome");
         System.out.println(noDuplicate(s));
         System.out.println(fibonacci(num));
@@ -22,6 +25,12 @@ public class PracticeImp {
         System.out.println("Numbers after swap: " + pi.swapNum1 + " " + pi.swapNum2);
         System.out.println(noVowelsString(vowelString));
         System.out.println(factorialOfNumber(factorialNum));
+        System.out.println(NthLargestNumberInArray(arr, largestNum));
+    }
+
+    private static int NthLargestNumberInArray(int[] arr, int largestNum) {
+        Arrays.sort(arr);
+        return arr[largestNum];
     }
 
     private static int factorialOfNumber(int factorialNum) {
