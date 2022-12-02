@@ -31,15 +31,15 @@ public class PracticeImp {
     }
 
     private static boolean checkPrime(int num) {
-        boolean flag = false;
-        for (int i = 2; i <= num / 2; ++i) {
+        boolean isPrime = true;
+        for (int i = 2; i <= num / 2; ++i) { //521
             // condition for non-prime number
             if (num % i == 0) {
-                flag = true;
+                isPrime = false;
                 break;
             }
         }
-        return !flag;
+        return isPrime;
     }
 
     private static int NthLargestNumberInArray(int[] arr, int largestNum) {
