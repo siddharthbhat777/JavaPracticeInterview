@@ -7,18 +7,20 @@ public class PracticeImp {
     int swapNum1 = 12, swapNum2 = 45; //need to initialize as instance variable to use call by reference
 
     public static void main(String[] args) {
-        /* Do not remove this */
+        /* Variables used */
         String s = "abcba";
         int num = 153;
         String vowelString = "Hello this is sid here.";
         int factorialNum = 5;
         int[] arr = {9, 2, 4, 1, 7, 23, 76, 5};
-        int largestNum = 4;
+        int largestNum = 3;
+
+        /* calling all functions */
         System.out.println(palindrome(s) ? "The string \"" + s + "\" is Palindrome" : "The string \"" + s + "\" is not Palindrome");
         System.out.println(noDuplicate(s));
         System.out.println(fibonacci(num));
         System.out.println(primeNumbers(num));
-        System.out.println(checkPrime(num)? "The number " + num + " is a prime number." : "The number " + num + " is not a prime number.");
+        System.out.println(checkPrime(num) ? "The number " + num + " is a prime number." : "The number " + num + " is not a prime number.");
         System.out.println(armstrongNum(num) ? "The number " + num + " is armstrong." : "The number " + num + " is not armstrong.");
         // using call by reference
         PracticeImp pi = new PracticeImp();
@@ -31,20 +33,28 @@ public class PracticeImp {
     }
 
     private static boolean checkPrime(int num) {
-        boolean isPrime = true;
-        for (int i = 2; i <= num / 2; ++i) { //521
+        for (int i = 2; i <= num / 2; ++i) {
             // condition for non-prime number
             if (num % i == 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
-        return isPrime;
+        return true;
     }
 
     private static int NthLargestNumberInArray(int[] arr, int largestNum) {
-        Arrays.sort(arr);
-        return arr[largestNum];
+        int arrLen = arr.length;
+        Arrays.sort(arr); // Ascending order
+        // Now for the resultant element, we need to start from the last element as the largest element is at last.
+        int result = 0;
+        int temp = arrLen - largestNum;
+        // If the last and element are equal then check the previous one else return the element.
+        if (arr[temp] != arr[arrLen - 1]) {
+            result = arr[temp];
+        } else {
+            result = arr[arrLen - 1];
+        }
+        return result;
     }
 
     private static int factorialOfNumber(int factorialNum) {
