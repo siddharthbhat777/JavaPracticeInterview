@@ -54,7 +54,7 @@ public class PracticeImp {
         } else {
             result = arr[arrLen - 1];
         }
-        return result; //
+        return result;
 
         /*
         import java.util.*;
