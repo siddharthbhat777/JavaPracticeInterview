@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Practice {
+public class UniqueCategories {
     public static void main(String[] args) {
         String [] categories = {"electronics", "games", "games", "footwear", "electronics", "clothing", "footwear", "footwear", "footwear"};
         System.out.println(Arrays.toString(showUniqueCategories(categories)));
